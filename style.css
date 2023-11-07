@@ -14,3 +14,9 @@ div.inserisci {
 .container-bottoni {
     width: 18.75rem;
 }
+
+
+.biglietto {
+    background-color: white;
+    width: 80%;
+}

@@ -14,14 +14,37 @@ genera.addEventListener('click', function() {
     console.log('Km:', km.toFixed(2));
     console.log("Fascia d'età:", fasciaEta);
 
-    
-    const risultatoHTML = `
-        <p>Nome e Cognome: ${nomeCognome}</p>
-        <p>Kilometri: ${km}</p>
-        <p>Fascia d'età: ${fasciaEta}</p>
-    `;
+    const rispNomeCognome = nomeCognome;
 
-    document.getElementById('risultato').innerHTML = risultatoHTML;
+    document.querySelector('.container.visually-hidden').classList.remove('visually-hidden');
+    document.getElementById('rispNomeCognome').innerHTML = rispNomeCognome;
+
+
+    let offertaScelta = '';
+
+    if (fasciaEta === 'Minorenne') {
+        offertaScelta = 'Offerta Junior';
+    } else if (fasciaEta === 'Maggiorenne') {
+        offertaScelta = 'Offerta Silver';
+    } else if (fasciaEta === 'Over 65') {
+        offertaScelta = 'Offerta Gold';
+    }
+    
+    console.log('Offerta scelta:', offertaScelta);
+    
+    const offertaEta = document.querySelector('.offertaEta');
+    offertaEta.textContent = offertaScelta;
+
+    // variabili sconto
+    const scontoMin = 20;
+    const scontoOver = 40;
+
+    // variabile prezzokm
+    const prezzoKm = 0.21;
+       
+    let prezzoBiglietto = km * prezzoKm;
+        
+        
 });
 
 

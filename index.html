@@ -11,7 +11,7 @@
 <body>
 
     <div class="container">
-        <h1 class="text-center text-white text-uppercase mt-3 mb-3">Calcola il prezzo del tuo biglietto</h1>
+        <h2 class="text-center text-white text-uppercase mt-3 mb-3">Calcola il prezzo del tuo biglietto</h2>
 
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mia-card mx-auto">
             <div class="card-body">
@@ -62,6 +62,45 @@
           </div>
 
     </div>
+
+    <div class="container visually-hidden">
+        <h2 class="text-center text-white text-uppercase mt-3 mb-3">Il tuo biglietto</h2>
+
+        <div class="biglietto mx-auto p-3">
+            <h5 class="text-uppercase">dettaglio passeggeri</h5>
+
+            <div class="row">
+                <div class="col-3 bg-secondary">
+                    <h5 class="text-uppercase">Nome passeggero</h5>
+                    <div id="rispNomeCognome"></div>
+                </div>
+
+                <div class="col-9">
+                    
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice CP</th>
+                            <th scope="col">Costo Biglietto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="offertaEta"></td>
+                            <td class="numCarrozza"></td>
+                            <td class="codiceCp"></td>
+                            <td class="rispPrezzoBiglietto"></td>
+                          </tr>
+                          
+                      </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- <label for="km">Km del tuo viaggio:</label>
     <input type="number" id="km" name="km" min="1" placeholder="digita il numero di km">
 
@@ -74,7 +113,6 @@
 
     <button id="genera">Genera biglietto</button>
     <br><br> -->
-    <div id="risultato"></div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
