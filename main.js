@@ -2,7 +2,8 @@
 
 const genera = document.getElementById('genera');
 
-genera.addEventListener('click', function() {
+genera.addEventListener('click', 
+function() {
     const nomeCognome = document.getElementById('nomeCognome').value;
 
     const km = Number(document.getElementById('km').value);
@@ -63,8 +64,17 @@ genera.addEventListener('click', function() {
         
     }
         
-    document.getElementById('rispPrezzoBiglietto').innerHTML = prezzoBiglietto;
-    console.log('Prezzo del biglietto: ', prezzoBiglietto);
+    document.getElementById('rispPrezzoBiglietto').innerHTML = prezzoBiglietto.toFixed(2)+'€';
+    console.log('Prezzo del biglietto: ', prezzoBiglietto.toFixed(2)+'€');
+
+
+});
+
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', 
+function() {
+    location.reload();
 });
 
 
