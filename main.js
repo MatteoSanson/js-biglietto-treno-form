@@ -39,6 +39,10 @@ genera.addEventListener('click', function() {
     console.log('Numero Carrozza:', numeroCarrozza);
     document.getElementById('numCarrozza').innerHTML = numeroCarrozza;
 
+    let codigoCp = Math.floor(Math.random() * 99999) + 1;
+    console.log('Codice CP:', codigoCp);
+    document.getElementById('codiceCp').innerHTML = codigoCp;
+
     // variabili sconto
     const scontoMin = 20;
     const scontoOver = 40;
