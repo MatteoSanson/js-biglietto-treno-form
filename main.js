@@ -35,6 +35,10 @@ genera.addEventListener('click', function() {
     const offertaEta = document.querySelector('.offertaEta');
     offertaEta.textContent = offertaScelta;
 
+    let numeroCarrozza = Math.floor(Math.random() * 20) + 1;
+    console.log('Numero Carrozza:', numeroCarrozza);
+    document.getElementById('numCarrozza').innerHTML = numeroCarrozza;
+
     // variabili sconto
     const scontoMin = 20;
     const scontoOver = 40;
