@@ -51,8 +51,20 @@ genera.addEventListener('click', function() {
     const prezzoKm = 0.21;
        
     let prezzoBiglietto = km * prezzoKm;
+
+    if(fasciaEta === 'Minorenne'){
+        const scontoBiglietto = ((prezzoBiglietto / 100) * scontoMin);
+        prezzoBiglietto -= scontoBiglietto;
+                        
+    }else if (fasciaEta === 'Over 65'){
+        const scontoBiglietto = ((prezzoBiglietto / 100) * scontoOver);
+        prezzoBiglietto -= scontoBiglietto;
+    }else {
         
+    }
         
+    document.getElementById('rispPrezzoBiglietto').innerHTML = prezzoBiglietto;
+    console.log('Prezzo del biglietto: ', prezzoBiglietto);
 });
 
 
